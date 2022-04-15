@@ -1,0 +1,7 @@
+keyStore "myKeyStore";
+grant signedBy "myDefender"
+{
+permission java.util.PropertyPermission "/Users/kalki", "read";
+permission java.io.FilePermission "${/Users/kalki}${/}.highscore", "read,write";
+permission com.scoredev.scores.HighScorePermission "*", signedBy "myDefender";
+};
